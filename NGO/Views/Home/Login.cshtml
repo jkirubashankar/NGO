@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#btnSubmit').click(function () {
+            if ($('#txtUsername').val() == 'admin' && $('#txtPassword').val() == 'admin') {
+                window.location.href = '../Home/Admin';
+            } else {
+                alert("Username and password is incorrect");
+            }
+        });
+    });
+</script>
+
+<div class="row mt-5">
+    <div class="col-md-4""></div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                Login
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" id="txtUsername" placeholder="User name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="txtPassword" placeholder="password" class="form-control" />
+                </div>
+                <div class="form-group text-md-center">
+                    <button class="btn-primary" id="btnSubmit">Submit</button>
+                </div>
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5"></div>
+</div>
